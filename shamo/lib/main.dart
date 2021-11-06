@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(ShamoApps());
-}
+void main() => runApp(MyApp());
 
-class ShamoApps extends StatelessWidget {
-  const ShamoApps({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SafeArea(
-          child: Center(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/icon_headset.png',
-                ),
-              ],
-            ),
-          ),
-        ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Image.asset(
+        'assets/image_splash.png',
       ),
     );
   }
