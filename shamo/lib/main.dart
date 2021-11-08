@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shamo/pages/splash_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,25 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Halo Semuanya',
-          style: GoogleFonts.poppins(
-            fontSize: 50,
-          ),
-        ),
-      ),
+      home: SplashPage(),
     );
   }
 }
